@@ -1,0 +1,45 @@
+{
+    "name": "tunnel-ssh-mysql-sample",
+    "version": "1.0.0",
+    "description": "tunnel-ssh-mysql-sample",
+    "main": "/dist/index.js",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.28.1",
+        "@typescript-eslint/parser": "^4.28.1",
+        "eslint": "^7.29.0",
+        "husky": "^6.0.0",
+        "lint-staged": "^11.0.0",
+        "mysql": "^2.18.1",
+        "ts-node": "^10.0.0",
+        "tunnel-ssh": "^4.1.4",
+        "typescript": "^4.3.4"
+    },
+    "scripts": {
+        "test": "npm test",
+        "prepare": "husky install",
+        "start": "NODE_ENV=development ts-node ./src/index.ts",
+        "lint": "eslint --cache src",
+        "format": "npx prettier --write src && eslint --cache --fix src"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KoinoEngineering/tunnel-ssh-mysql-sample.git"
+    },
+    "keywords": [
+        "tunnel",
+        "ssh",
+        "mysql"
+    ],
+    "author": "https://github.com/KoinoEngineering",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/KoinoEngineering/tunnel-ssh-mysql-sample/issues"
+    },
+    "homepage": "https://github.com/KoinoEngineering/tunnel-ssh-mysql-sample#readme",
+    "lint-staged": {
+        "*.(js|ts)": [
+            "npx prettier --write",
+            "eslint --cache --fix"
+        ]
+    }
+}
